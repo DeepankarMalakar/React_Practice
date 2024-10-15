@@ -1,0 +1,104 @@
+body {
+  font-family: sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+nav .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  margin-left: 50px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  margin-right: 30px;
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: crimson;
+  color: #fff;
+  border: none;
+}
+
+.container {
+  margin-left: 150px;
+  margin-top: 30px;
+  width: 600px;
+  /* border: 1px solid; */
+}
+
+.container .content1 h1 {
+  font-size: 110px;
+  font-weight: bold;
+  color: #000;
+  margin: 10px 0;
+}
+
+.container .content2 span{
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: rgb(85, 78, 78);
+  font-weight: bold;
+}
+
+.container .btn-areas {
+  margin-top: 30px;
+}
+
+.container .btn-areas button {
+  font-size: 22px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.btn-areas .shopNow {
+    background-color: crimson;
+    color: #fff;
+    border: 1px solid;
+}
+
+.btn-areas .category {
+  margin-left: 40px;
+  color: rgb(85, 78, 78);;
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.container .content3 {
+  margin-top: 30px;
+}
+
+.content3 span {
+  font-size: 15px;
+  color: rgb(85, 78, 78);;
+}
+
+.ecommerce-logo {
+  display: flex;
+  margin-top: 10px;
+  gap: 20px;
+  cursor: pointer;
+  padding-bottom: 30px;
+}
