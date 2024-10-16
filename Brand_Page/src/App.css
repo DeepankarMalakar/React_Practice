@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -40,17 +44,18 @@ nav ul {
   background-color: crimson;
   color: #fff;
   border: none;
+  cursor: pointer;
 }
 
 .container {
-  margin-left: 150px;
+  margin-left: 20px;
   margin-top: 30px;
   width: 600px;
   /* border: 1px solid; */
 }
 
 .container .content1 h1 {
-  font-size: 110px;
+  font-size: 70px;
   font-weight: bold;
   color: #000;
   margin: 10px 0;
@@ -101,4 +106,29 @@ nav ul {
   gap: 20px;
   cursor: pointer;
   padding-bottom: 30px;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 990px)  {
+  .parent-container {
+    display: block;
+    margin-left: 150px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .btn-container {
+    margin-left: 40px;
+  }
+
+  .parent-container {
+    margin-left: 50px;
+  }
 }
