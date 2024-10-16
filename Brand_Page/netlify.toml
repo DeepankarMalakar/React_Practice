@@ -1,6 +1,6 @@
 [[redirects]]
-from = "/React_Projects/*"
-to = "/React_Projects/index.html"
+from = "/React_Practice/*"
+to = "/React_Practice/index.html"
 status = 200
 
 [[redirects]]
