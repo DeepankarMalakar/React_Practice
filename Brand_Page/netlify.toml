@@ -1,4 +1,9 @@
 [[redirects]]
-from = "/*"
-to = "/index.html"
+from = "/React_Projects/*"
+to = "/React_Projects/index.html"
+status = 200
+
+[[redirects]]
+from = "/Brand_Page/*"
+to = "/Brand_Page/index.html"
 status = 200
