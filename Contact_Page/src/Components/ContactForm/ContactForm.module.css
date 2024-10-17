@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    width: 1200px;
+    /* border: 1px solid; */
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.contactForm {
+    width: 400px;
+    /* border: 1px solid; */
+}
+
+.top_btn_container {
+    display: flex;
+    gap: 30px;
+}

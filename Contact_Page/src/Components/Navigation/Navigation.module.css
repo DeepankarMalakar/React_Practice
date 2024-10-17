@@ -1,0 +1,29 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    align-items: center;
+    border: 1px solid;
+}
+
+.logo-container {
+    height: 72px;
+}
+
+.logo-container img {
+    height: 72px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.list-items ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.list-items {
+    margin-right: 20px;
+}
