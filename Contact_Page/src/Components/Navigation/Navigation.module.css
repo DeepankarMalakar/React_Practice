@@ -3,7 +3,7 @@
     justify-content: space-between;
     height: 72px;
     align-items: center;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .logo-container {
@@ -26,4 +26,18 @@
 
 .list-items {
     margin-right: 20px;
+}
+
+@media (max-width: 1068px) {
+    .list-items ul {
+        margin-right: 0;
+        /* position: absolute; */
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .list-items ul {
+        font-size: 25px;
+    }
 }

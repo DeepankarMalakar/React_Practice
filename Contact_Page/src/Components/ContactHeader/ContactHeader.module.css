@@ -20,3 +20,43 @@
     color: rgb(78, 75, 75);
     min-width: 100px;
 }
+
+@media (max-width: 1000px) {
+    .heading {
+        font-size: 20px;
+    }
+
+    .content1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 695px) {
+    .heading {
+        font-size: 22px;
+    }
+
+    .content1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 25px;
+    }
+
+    .content1 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 550px) {
+    .heading {
+        font-size: 30px;
+    }
+
+    .content1 {
+        font-size: 28px;
+    }
+}
