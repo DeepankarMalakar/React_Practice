@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-const NumberSelector = () => {
-    const [selectedNumber, setSelectedNumber] = useState(null);
+const NumberSelector = ({error}) => {
+    const [selectedNumber, setSelectedNumber] = useState();
 
     useEffect(() => {
         console.log(selectedNumber);
@@ -25,6 +25,7 @@ const NumberSelector = () => {
             {buttons}
             <div className="flex justify-end mt-4">
                 <span className="font-semibold">Select number: {selectedNumber}</span>
+                <span>{error}</span>
             </div>
         </div>
     );

@@ -1,20 +1,18 @@
-import { useState } from "react"
-function DiceCard() {
-    // const [isRules, setIsRules] = useState(false)
-    // const showRules = () => {
-    //     setIsRules(true)
+import ResetBtn from "./ResetBtn"
+import ShowBtn from "./ShowBtn"
+function DiceCard({currentDice, roleDice, resetScore}) {
+
+    // const [currentDice, setCurrentDice] = useState(1) -> taking this to parent component
+
+    // const generateRandomNumber = (min, max) => {
+    //     return (Math.floor(Math.random() * (max-min) + min))
     // }
-    const [currentDice, setCurrentDice] = useState(1)
 
-    const generateRandomNumber = (min, max) => {
-        return (Math.floor(Math.random() * (max-min) + min))
-    }
+    // const roleDice = () => {
+    //     const randomPics = generateRandomNumber(1, 7)
 
-    const roleDice = () => {
-        const randomPics = generateRandomNumber(1, 7)
-
-        setCurrentDice(randomPics)
-    }
+    //     setCurrentDice(randomPics)
+    // }
 
     return (
         <div className="container3 flex justify-center items-center">
@@ -25,12 +23,14 @@ function DiceCard() {
                 <div className="mt-2 flex items-center">
                     <span className="font-semibold text-l">Click on the dice to roll</span>
                 </div>
-                <div className="px-4 py-2 border-[1px] border-black rounded-md my-2 cursor-pointer">
+                {/* <div className="px-4 py-2 border-[1px] border-black rounded-md my-2 cursor-pointer">
                     <button className="text-center font-semibold">Reset Score</button>
-                </div>
-                <div className="px-4 py-2 bg-black text-white flex rounded-md cursor-pointer">
+                </div> */}
+                {/* <div className="px-4 py-2 bg-black text-white flex rounded-md cursor-pointer">
                     <button>Show Rules</button>
-                </div>
+                </div> */}
+                <ShowBtn />
+                <ResetBtn resetScore = {resetScore}/>
             </div>
         </div>
     )
