@@ -10,9 +10,9 @@ function ShowBtn() {
 
     return (
         <div>
-            <div className="px-4 py-2 bg-black text-white flex rounded-md cursor-pointer">
+            <div className="px-4 py-2 bg-black text-white flex font-semibold rounded-md cursor-pointer hover:bg-white hover:text-black hover:border-[1px] hover:border-black hover:font-semibold">
                 <button onClick={toggleRules}>
-                    {isRulesVisible ? "Hide Rules" : "Show Rules"}
+                    Show Rules
                 </button>
             </div>
             {isRulesVisible && <ShowRules closeRules={toggleRules} />}

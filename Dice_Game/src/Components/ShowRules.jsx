@@ -5,7 +5,7 @@ function ShowRules() {
 
     return isClose ? (
         <div className="flex justify-center items-center">
-            <div className="font-semibold border-2 w-[600px] h-[200px] bg-orange-200 mt-3 p-4 rounded-sm relative">
+            <div className="font-semibold border-2 w-[600px] h-[200px] bg-slate-200 rounded-md mt-3 p-4 relative">
                 <h1 className="text-xl flex justify-between">
                     Rules for playing dice:
                     <span
