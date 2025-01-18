@@ -34,7 +34,7 @@ function FoodBody() {
     };
 
     const filteredData = data?.filter((food) =>
-        food.name.toLowerCase().includes(searchQuery) && (type == 'All' || food.type.toLowerCase() === type.toLowerCase()) // Filter based on search input and type
+        food.name.toLowerCase().includes(searchQuery) && (type == 'All' || food.type.toLowerCase() === type.toLowerCase()) // Filtering both input and type based on search input and type
     );
 
     if (error) return <div className="text-red-500 text-center mt-4">{error}</div>;
