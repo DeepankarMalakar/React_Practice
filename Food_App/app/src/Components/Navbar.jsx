@@ -1,4 +1,4 @@
-function Navbar({handleSearch}) {
+function Navbar({ handleSearch, handleType }) {
     return (
         <div className="w-full h-24 bg-zinc-950 flex justify-between items-center text-white font-inter">
             <div className="border-[1px] ml-4 rounded-md" id="logo-name">
@@ -6,10 +6,10 @@ function Navbar({handleSearch}) {
             </div>
             <div id="list-nav">
                 <ul className="flex items-center space-x-5 text-md p-2">
-                    <li className="border-[1px] px-3 py-2 bg-red-600 rounded-md border-none cursor-pointer hover:bg-red-500">All</li>
-                    <li className="border-[2px] px-3 py-2 bg-red-600 rounded-md border-none cursor-pointer hover:bg-red-500">Breakfast</li>
-                    <li className="border-[2px] px-3 py-2 bg-red-600 rounded-md border-none cursor-pointer hover:bg-red-500">Lunch</li>
-                    <li className="border-[2px] px-3 py-2 bg-red-600 rounded-md border-none cursor-pointer hover:bg-red-500">Dinner</li>
+                    <li className="border-[1px] px-3 py-2 bg-red-600 rounded-md border-none cursor-pointer hover:bg-red-500" onClick={() => handleType('All')}>All</li>
+                    <li className="border-[2px] px-3 py-2 bg-red-600 rounded-md border-none cursor-pointer hover:bg-red-500" onClick={() => handleType('breakfast')}>Breakfast</li>
+                    <li className="border-[2px] px-3 py-2 bg-red-600 rounded-md border-none cursor-pointer hover:bg-red-500" onClick={() => handleType('lunch')}>Lunch</li>
+                    <li className="border-[2px] px-3 py-2 bg-red-600 rounded-md border-none cursor-pointer hover:bg-red-500" onClick={() => handleType('dinner')}>Dinner</li>
                 </ul>
             </div>
             <div id="nav-search" className="mr-6">
