@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 
-function ProductFetch() {
-    const PRODUCTS = "https://dummyjson.com/products";
+function ProductFetch({searchTerm}) {
     const [items, setItems] = useState([])
+    const PRODUCTS = "https://dummyjson.com/products";
 
     const fetchProducts = async () => {
         try {
@@ -21,11 +21,15 @@ function ProductFetch() {
         fetchProducts()
     }, []);
 
+    const filteredItems = items.filter((item) =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ml-10 mt-5">
             {
-                items.map((item) => (
+                filteredItems.map((item) => (
                     <ProductCard key={item.id} item={item}/>
                 ))
             }
