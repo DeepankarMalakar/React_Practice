@@ -11,32 +11,37 @@ import Error from './pages/Error.jsx'
 
 const routes = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <App />,
     children: [
       {
-        path: "/home",
-        element: <Home />
+        index: true, // Default route for "/"
+        element: <Home />,
       },
       {
-        path: "/about",
-        element: <About />
+        path: "home",
+        element: <Home />,
       },
       {
-        path: "/contact",
-        element: <Contact />
+        path: "about",
+        element: <About />,
       },
       {
-        path: "/profile",
-        element: <Profile />
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "profile/:username",
+        element: <Profile />,
       },
       {
         path: "*",
-        element: <Error />
+        element: <Error />,
       },
-    ]
-  }
-])
+    ],
+  },
+]);
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
