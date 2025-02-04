@@ -1,9 +1,10 @@
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="bg-white w-screen h-16 flex flex-wrap items-center px-4 shadow-sm justify-between sm:h-20">
       {/* Logo */}
       <div className="flex items-center">
-        <span className="text-blue-600 text-2xl font-semibold">iGenerator</span>
+        <span className="text-blue-700 text-3xl font-semibold"><NavLink to={"/"}>iGenerator</NavLink></span>
       </div>
 
       {/* Tagline */}
