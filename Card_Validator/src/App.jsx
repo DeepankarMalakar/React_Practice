@@ -5,6 +5,7 @@ const App = () => {
   const [cardNumber, setCardNumber] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
   const [cvv, setCvv] = useState("");
+  const [allFeilds, setAllFeilds] = useState("")
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");  // Success message state
 
@@ -13,6 +14,11 @@ const App = () => {
     e.preventDefault();
     setError(""); // Clear previous errors
     setSuccess(""); // Clear previous success messages
+
+    // Checking if any feilds are empty
+    if (!cardNumber || !expiryDate || !cvv) {
+      setAllFeilds("Please Enter all Credentials")
+    }
 
     // Perform validations
     if (!validateCardNumber(cardNumber)) {
@@ -29,6 +35,7 @@ const App = () => {
       setError("Invalid CVV");
       return;
     }
+
 
     setSuccess("Card is valid!"); // Set success message
   };
@@ -78,7 +85,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-100 w-screen h-screen overflow-hidden">
       <Form
         handleSubmission={handleSubmission}
         error={error}
@@ -89,6 +96,7 @@ const App = () => {
         cvv={cvv}
         setCvv={setCvv}
         success={success}
+        allFeilds={allFeilds}
       />
     </div>
   );

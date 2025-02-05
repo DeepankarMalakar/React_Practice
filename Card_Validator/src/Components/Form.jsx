@@ -7,7 +7,8 @@ const Form = ({
     setExpiryDate,
     cvv,
     setCvv,
-    success
+    success,
+    allFeilds
 }) => {
     return (
         <div className="flex justify-center mt-20">
@@ -15,6 +16,7 @@ const Form = ({
                 <h1 className="text-2xl font-bold text-center mb-4">Card Validator</h1>
                 {error && <p className="text-red-500 font-semibold text-center mb-4">{error}</p>}
                 {success && <p className="text-green-600 font-semibold text-center mb-4">{success}</p>}
+                {allFeilds && <p className="text-green-600 font-semibold text-center mb-4">{allFeilds}</p>}
                 <form className="space-y-4" onSubmit={handleSubmission}>
                     <input
                         type="text"
@@ -41,10 +43,16 @@ const Form = ({
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition"
+                        className="w-full cursor-pointer bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition"
                     >
                         Validate
                     </button>
+                    <div className="flex justify-between">
+                    <img src="/card.png" alt="card-logo" className="w-12 h-12" />
+                    <img src="/credit-card (2).png" alt="card-logo" className="w-12 h-12" />
+                    <img src="/visa (1).png" alt="card-logo" className="w-12 h-12" />
+                    <img src="/american-express.png" alt="card-logo" className="w-12 h-12" />
+                    </div>
                 </form>
             </div>
         </div>
