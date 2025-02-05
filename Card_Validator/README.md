@@ -26,20 +26,20 @@ Remove spaces: 4539148803436467
 
 # Start from the rightmost digit, double every other digit: Here's how the digits transform:
 
-7 (no change, it’s untouched)
-6 * 2 = 12 → 12 is greater than 9, so we subtract 9 → 12 - 9 = 3
-4 (no change, it’s untouched)
-6 * 2 = 12 → 12 is greater than 9, so we subtract 9 → 12 - 9 = 3
-3 (no change, it’s untouched)
-0 * 2 = 0 (no change)
-8 (no change, it’s untouched)
-8 * 2 = 16 → 16 is greater than 9, so we subtract 9 → 16 - 9 = 7
-4 (no change, it’s untouched)
-1 * 2 = 2 (no change)
-5 (no change, it’s untouched)
-9 * 2 = 18 → 18 is greater than 9, so we subtract 9 → 18 - 9 = 9
-3 (no change, it’s untouched)
-4 * 2 = 8 (no change)
+* 7 (no change, it’s untouched)
+* 6 * 2 = 12 → 12 is greater than 9, so we subtract 9 → 12 - 9 = 3, 
+* 4 (no change, it’s untouched)
+* 6 * 2 = 12 → 12 is greater than 9, so we subtract 9 → 12 - 9 = 3
+* 3 (no change, it’s untouched)
+* 0 * 2 = 0 (no change)
+* 8 (no change, it’s untouched)
+* 8 * 2 = 16 → 16 is greater than 9, so we subtract 9 → 16 - 9 = 7
+* 4 (no change, it’s untouched)
+* 1 * 2 = 2 (no change)
+* 5 (no change, it’s untouched)
+* 9 * 2 = 18 → 18 is greater than 9, so we subtract 9 → 18 - 9 = 9
+* 3 (no change, it’s untouched)
+* 4 * 2 = 8 (no change)
 
 # Start from the rightmost digit, double every other digit:
 7 6 4 6 3 0 8 8 4 1 5 9 3 4
