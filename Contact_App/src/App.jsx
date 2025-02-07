@@ -10,8 +10,7 @@ const App = () => {
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [isOpen, setIsOpen] = useState(false)
-
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const getContacts = async () => {
@@ -42,7 +41,6 @@ const App = () => {
     return <div className="text-center mt-10 text-red-500">{error}</div>;
   }
 
-
   return (
     <div className="max-w-[95%] sm:max-w-[700px] mx-auto mt-10">
       {/* Navbar and Input */}
@@ -58,7 +56,7 @@ const App = () => {
             <Contact key={contact.id} name={contact.name} email={contact.email} />
           ))
         ) : (
-          <div className="text-center text-gray-500">No contacts found.</div>
+          <div className="text-center text-white">No contacts found.</div>
         )}
       </div>
 
