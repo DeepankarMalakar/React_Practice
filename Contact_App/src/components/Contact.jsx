@@ -1,8 +1,16 @@
 import userLogo from "../assets/user.png";
 import editLogo from "../assets/edit.png";
 import deleteLogo from "../assets/icons8-trash-30.png";
-
-const Contact = ({ name, email }) => {
+import { db } from "../config/firebase";
+import { deleteDoc, doc } from "firebase/firestore";
+const Contact = ({ id, name, email, onOpen }) => {
+    const deleteContact = async (id) => {
+        try {
+            await deleteDoc(doc(db, "contacts", id))
+        } catch (error) {
+            console.log(error)
+        }
+    }
     return (
         <div className="bg-orange-500 w-full w sm:w-[400px] p-4 rounded-lg items-center gap-4 shadow-md mx-auto grid grid-cols-2 md:grid md:grid-rows-2">
             {/* User Logo */}
@@ -38,11 +46,14 @@ const Contact = ({ name, email }) => {
                     src={editLogo}
                     alt="Edit"
                     className="w-[35px] h-[35px] sm:w-[35px] sm:h-[35px] object-contain cursor-pointer bg-white p-2 rounded-sm"
+                    onClick={() => onOpen({ id, name, email })} // Pass the contact data
                 />
+
                 <img
                     src={deleteLogo}
                     alt="Delete"
                     className="w-[35px] h-[35px] sm:w-[35px] sm:h-[35px] object-contain cursor-pointer bg-white p-2 rounded-sm"
+                    onClick={() => deleteContact(id)}
                 />
             </div>
         </div>
