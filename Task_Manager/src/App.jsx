@@ -46,7 +46,8 @@ const App = () => {
                 padding: "16px",
             }}
         >
-            <Input fetchTasks={fetchTasks} /> {/* Pass function to refresh tasks */}
+            {/* Input Component for Adding Tasks */}
+            <Input fetchTasks={fetchTasks} />
 
             {loading ? (
                 <div className="text-center my-3">
@@ -56,7 +57,16 @@ const App = () => {
             ) : error ? (
                 <p className="text-danger text-center">{error}</p>
             ) : theTask.length > 0 ? (
-                theTask.map((task) => <Task key={task.id} id={task.id} taskName={task.task} />)
+                theTask.map((task) => (
+                    <Task
+                        key={task.id}
+                        id={task.id}
+                        taskName={task.task}
+                        isChecked={task.isChecked || false} // ✅ Pass isChecked state
+                        fetchTasks={fetchTasks}
+                    />
+                ))
+
             ) : (
                 <h5 className="text-center my-3">No Pending Tasks...</h5>
             )}
